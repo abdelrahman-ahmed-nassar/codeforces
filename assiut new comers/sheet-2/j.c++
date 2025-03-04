@@ -5,31 +5,31 @@
 using namespace std;
 
 
-bool isPrime(int n)
+bool is_prime(int n)
 {
-  bool isPrime = true;
+  bool is_prime = true;
 
   if (n == 2)
   {
-    return isPrime;
+    return is_prime;
   }
 
   if (n % 2 == 0)
   {
-    isPrime = false;
-    return isPrime;
+    is_prime = false;
+    return is_prime;
   }
 
   for (int i = 3; i < n; i += 2)
   {
     if (n % i == 0)
     {
-      isPrime = false;
+      is_prime = false;
       break;
     }
   }
 
-  return isPrime;
+  return is_prime;
 }
 
 int main()
@@ -39,7 +39,7 @@ int main()
 
   for (int i = 2; i <= n; i++)
   {
-    if(isPrime(i)) {
+    if(is_prime(i)) {
       cout<<i<<" ";
     }
   }
